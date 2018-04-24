@@ -20,8 +20,7 @@ private $dsn, $user , $password,
         
     }catch(PDOException $e){
         $this->error_con = '<center><h4>Falha com a conexão, informe ao suporte!</h4></center>';
-        parent::criarLog('log/',0700,'log_con.txt', 'a', $e->getMessage().PHP_EOL.
-                                                            'OCORREU NA LINHA: '.$e->getLine());
+        parent::criarLog('log/',0700,'log_con.txt', 'a', $e);
         }
     }
 

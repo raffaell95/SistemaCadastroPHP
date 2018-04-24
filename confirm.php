@@ -5,7 +5,8 @@ class confirm extends conexao{
     private $query, $run;
 
     public function __construct(){
-        parent::__construct('mysql:dbname=cadastro;host=localhost','root','');
+        parent::__construct("mysql:dbname=cadastro;host=localhost","sistemaTeste","");
+
     }
 
     private function set_start($s){
@@ -39,4 +40,3 @@ class confirm extends conexao{
         return $this;
     }
 }
-

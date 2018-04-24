@@ -17,6 +17,7 @@
     
 <?php
 require_once 'confirm.php';
+require_once 'conexao.php';
 
 $nome = $_POST['Nome'];
 $profissao = $_POST['Profissao'];
@@ -33,6 +34,7 @@ $teste->insert('funcionarios','nome=?, profissao=?, cep=?, rua=?, bairro=?, cida
 ->run(["$nome","$profissao","$cep","$rua","$bairro","$cidade","$uf","$ibge"]);
 echo '<center><h4>Cadastro realizado com sucesso!</center></h4><br>';
 echo '<center><a class="btn btn-secondary btconfirm" href="consultas.php">Consultar</a></center>';
+
 ?>
 
 
