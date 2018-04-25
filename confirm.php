@@ -5,20 +5,18 @@ class confirm extends conexao{
     private $query, $run;
 
     public function __construct(){
-        parent::__construct("mysql:dbname=cadastro;host=localhost","sistemaTeste","");
-
+        parent::__construct();
+        
     }
 
     private function set_start($s){
 
-        if (is_object(parent::getConnexao())):
-            $this->query = parent::getConnexao()->prepare($s);
+        if (is_object(parent::getConexao())):
+            $this->query = parent::getConexao()->prepare($s);
             
         else:
             die(parent::msgUsuario());
         endif;
-        
-
     }
 
     private function do_run(){
